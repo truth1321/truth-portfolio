@@ -36,13 +36,12 @@ footer {
   color: white;
   margin-top: 1rem;
 }
-/* Fade-in animation */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
 
-#hero, h2 {
-  animation: fadeIn 7s ease-in;
+.hero-banner {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
