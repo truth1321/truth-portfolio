@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Truth Chainda | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Truth Chainda</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  
+<div id="project-filters">
+  <button onclick="filterProjects('all')">All</button>
+  <button onclick="filterProjects('web')">Web</button>
+  <button onclick="filterProjects('school')">School</button>
+</div>
+
+<ul id="project-list">
+  <li class="project web">My Portfolio Website</li>
+  <li class="project school">School Management System</li>
+</ul>
+
+
+  <section id="hero">
+    <h2>Web Developer in the Making</h2>
+    <p>I design and build websites with clean, modern code.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Truth Chainda from Lusaka, Zambia. I hold a Diploma in Computer Science and I’m passionate about becoming a full-time web developer.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>📁 Portfolio Website (this one!)</li>
+      <li>📁 Coming Soon: School Management System</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Truth Chainda</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
