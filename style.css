@@ -37,6 +37,7 @@ footer {
   margin-top: 1rem;
 }
 
+
 .hero-banner {
   width: 100%;
   max-width: 800px;
@@ -45,3 +46,59 @@ footer {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+/* ...existing code... */
+
+body {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* fallback background */
+  background: #111;
+}
+
+/* Animated background images */
+.bg-anim {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-anim img {
+  position: absolute;
+  width: 200px;
+  opacity: 0.15;
+  animation: float 20s linear infinite;
+}
+
+.bg-anim img:nth-child(1) {
+  left: 10%; top: 20%;
+  animation-delay: 0s;
+}
+.bg-anim img:nth-child(2) {
+  left: 60%; top: 40%;
+  animation-delay: 5s;
+}
+.bg-anim img:nth-child(3) {
+  left: 30%; top: 70%;
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1);}
+  50% { transform: translateY(-40px) scale(1.05);}
+  100% { transform: translateY(0) scale(1);}
+}
+
+
+.hero-banner {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
