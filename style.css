@@ -2,27 +2,99 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
   background: #f4f4f4;
   color: #333;
 }
-
 header {
-  background: #333;
+  background: #222;
   color: white;
   padding: 1rem 2rem;
   text-align: center;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  transition: max-height 0.3s;
 }
 
 nav a {
   color: #fff;
   margin: 0 10px;
   text-decoration: none;
+  display: inline-block;
+  padding: 0.5em 0;
+}
+
+/* Hamburger button styles */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  z-index: 2;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  background: #fff;
+  height: 3px;
+  width: 24px;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    background: #222;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+  }
+
+  nav.open {
+    max-height: 300px; /* enough to show all links */
+    transition: max-height 0.3s;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
 }
 
 section {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   background: white;
   margin-top: 1rem;
@@ -32,21 +104,62 @@ section {
 footer {
   text-align: center;
   padding: 1rem;
-  background: #333;
+  background: #222;
   color: white;
   margin-top: 1rem;
 }
 
 
-.hero-banner {
-  width: 100%;
-  max-width: 800px;
-  display: block;
-  margin: 2rem auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.cv-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
-/* ...existing code... */
+
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-card {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+}
+
+blockquote {
+  background: #eee;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid #333;
+}
+
+.socials {
+  margin-top: 1rem;
+}
+
+.socials a {
+  margin-right: 10px;
+  color: #0073e6;
+  text-decoration: none;
+}
 
 body {
   position: relative;
@@ -101,4 +214,3 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-

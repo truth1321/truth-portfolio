@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Truth Chainda | Portfolio</title>
+  <title>Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,19 +12,23 @@
     <img src="img2.png" alt="" />
     <img src="img3.png" alt="" />
   </div>
-  <header>
-    <h1>Truth Chainda</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+ <header>
+  <h1>Truth Chainda</h1>
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    <span class="hamburger"></span>
+  </button>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 
   <section id="hero">
     <img src="truth-banner.png" alt="Truth the Web Developer" class="hero-banner" />
-    <a href="https://raw.githubusercontent.com/truth1321/truth-portfolio/main/Truth_Chainda_CV.pdf" download="document.pdf">📄 Download My CV</a>
+    <a href="https://raw.githubusercontent.com/truth1321/truth-portfolio/main/Truth_Chainda_CV.pdf" download="document.pdf" class="cv-button">📄 Download My CV</a>
   </section>
 
   <section id="about">
@@ -57,15 +61,21 @@
     <p>Email: abelchainda@gmail.com</p>
     <p>Phone: 0974299219</p>
     <div class="socials">
-      <a href="https://github.com" target="_blank">GitHub</a>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a href="https://wa.me/260964953357" target="_blank">WhatsApp</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/260964953357" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Truth Chainda</p>
   </footer>
+  <script>
+// Responsive nav toggle (optional, but more accessible)
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  document.querySelector('nav').classList.toggle('open');
+});
+</script>
 
   <script src="script.js"></script>
 </body>
