@@ -15,13 +15,12 @@ header {
 }
 
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
   background: #fff; /* Adjust as needed */
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 1000;    /* Ensures nav stays on top */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Optional: adds a subtle shadow */
 }
 
 nav a {
